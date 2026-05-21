@@ -57,6 +57,8 @@ Tujuan penggunaan rumus Slovin dalam penelitian ini adalah untuk menentukan juml
 | Tingkat Kesalahan (e)     | 0.15  |
 | Rumus Slovin              | n = N / (1 + N·e²) |
 | Hasil Perhitungan Sampel  | 35    |
+#### Gambar Output
+![image alt](https://raw.githubusercontent.com/cokordedewi02-star/Tugas-2-Nonprobability-survey/5472b262c18355caf0ef4e02b4cebd5b61baa6dd/OUTPUT%20RUMUS%20SLOVIN.png)
 
 Berdasarkan hasil perhitungan menggunakan rumus Slovin, diperoleh jumlah sampel sebesar 35 responden dari total populasi 154 mahasiswa dengan tingkat kesalahan 15%. Hal ini menunjukkan bahwa dari keseluruhan populasi, cukup diambil 35 responden sebagai sampel penelitian untuk mewakili karakteristik populasi secara keseluruhan. Dengan demikian, sampel yang diperoleh sudah memenuhi prinsip keterwakilan data sehingga dapat digunakan untuk analisis lebih lanjut dalam penelitian mengenai tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram.
 ### Uji Validitas
