@@ -57,6 +57,7 @@ Tujuan penggunaan rumus Slovin dalam penelitian ini adalah untuk menentukan juml
 | Tingkat Kesalahan (e)     | 0.15  |
 | Rumus Slovin              | n = N / (1 + N·e²) |
 | Hasil Perhitungan Sampel  | 35    |
+
 #### Gambar Output
 ![image alt](https://raw.githubusercontent.com/cokordedewi02-star/Tugas-2-Nonprobability-survey/5472b262c18355caf0ef4e02b4cebd5b61baa6dd/OUTPUT%20RUMUS%20SLOVIN.png)
 
@@ -76,6 +77,7 @@ Uji validitas dalam penelitian ini bertujuan untuk mengetahui ketepatan setiap b
 | P8   | 0.6960094 | 0.334   | Valid     |
 | P9   | 0.8581276 | 0.334   | Valid     |
 | P10  | 0.8757098 | 0.334   | Valid     |
+
 #### Gambar Ouput 
 ![image alt](https://raw.githubusercontent.com/cokordedewi02-star/Tugas-2-Nonprobability-survey/90033953eccec6c4941301e57f3d7c022b4f0240/OUTPUT%20UJI%20VALIDITAS%201.png)
 
@@ -103,6 +105,10 @@ Uji reliabilitas bertujuan untuk mengukur sejauh mana instrumen kuesioner yang d
 |------------------|----------|
 | Cronbach’s Alpha | 0.8528136|
 
+#### Gambar Output
+![image alt](https://raw.githubusercontent.com/cokordedewi02-star/Tugas-2-Nonprobability-survey/90033953eccec6c4941301e57f3d7c022b4f0240/OUTPUT%20UJI%20REBILITAS.png)
+
 Berdasarkan hasil uji reliabilitas menggunakan Cronbach’s Alpha, diperoleh nilai raw alpha sebesar 0,8528. Nilai ini menunjukkan bahwa instrumen kuesioner memiliki tingkat reliabilitas yang tinggi karena telah melebihi batas minimum yang umumnya digunakan yaitu 0,70. Hal ini berarti bahwa seluruh butir pertanyaan dalam kuesioner memiliki konsistensi internal yang baik dalam mengukur variabel yang sama, yaitu tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram. Dengan demikian, instrumen penelitian dapat dinyatakan reliabel dan layak digunakan untuk analisis lebih lanjut.
 
 ## Kesimpulan
+Berdasarkan hasil penelitian mengenai Analisis Tingkat Kepuasan Mahasiswa terhadap Sarana dan Prasarana di Universitas Mataram menggunakan pendekatan Non-Probability Sampling, diperoleh jumlah sampel sebanyak 35 responden dari total populasi 154 mahasiswa dengan tingkat kesalahan 15% berdasarkan perhitungan rumus Slovin. Hal ini menunjukkan bahwa sampel yang digunakan telah cukup mewakili kondisi populasi secara keseluruhan. Hasil uji validitas menunjukkan bahwa seluruh item pertanyaan (P1–P10) memiliki nilai r hitung yang lebih besar dibandingkan r tabel dimana r tabel sebesar 0,334, sehingga semua pertanyaan kuesioner dinyatakan valid. Dengan demikia setiap item pertanyaan mampu mengukur variabel kepuasan mahasiswa terhadap sarana dan prasarana dengan tepat dan sesuai dengan konsep yang diteliti. Selanjutnya, hasil uji reliabilitas menggunakan Cronbach’s Alpha diperoleh nilai sebesar 0,8528 yang dimana lebih besar dari batas minimum 0,70. Hal ini menunjukkan bahwa instrumen kuesioner memiliki tingkat konsistensi internal yang tinggi, sehingga hasil pengukuran yang diperoleh dapat dipercaya dan stabil apabila digunakan kembali pada kondisi yang serupa. Dengan demikian, dapat disimpulkan bahwa seluruh instrumen penelitian telah memenuhi kriteria validitas dan reliabilitas, sehingga layak digunakan dalam analisis lebih lanjut. Hasil penelitian ini juga dapat menjadi dasar yang kuat untuk menggambarkan tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram serta dapat dijadikan bahan evaluasi bagi pihak universitas dalam meningkatkan kualitas fasilitas yang tersedia.
