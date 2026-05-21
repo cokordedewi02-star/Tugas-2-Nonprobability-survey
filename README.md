@@ -76,6 +76,8 @@ Uji validitas dalam penelitian ini bertujuan untuk mengetahui ketepatan setiap b
 | P8   | 0.6960094 | 0.334   | Valid     |
 | P9   | 0.8581276 | 0.334   | Valid     |
 | P10  | 0.8757098 | 0.334   | Valid     |
+#### Gambar Ouput 
+![image alt](https://raw.githubusercontent.com/cokordedewi02-star/Tugas-2-Nonprobability-survey/90033953eccec6c4941301e57f3d7c022b4f0240/OUTPUT%20UJI%20VALIDITAS%201.png)
 
 Berdasarkan hasil uji validitas menggunakan korelasi item–total dengan r tabel sebesar 0,334, diperoleh bahwa seluruh item pertanyaan pada kuesioner dinyatakan valid. Secara rinci, nilai r hitung untuk masing-masing item adalah P1 sebesar 0,527, P2 sebesar 0,675, P3 sebesar 0,622, P4 sebesar 0,556, P5 sebesar 0,599, P6 sebesar 0,504, P7 sebesar 0,736, P8 sebesar 0,696, P9 sebesar 0,858, dan P10 sebesar 0,876. Seluruh nilai tersebut lebih besar dibandingkan r tabel, sehingga menunjukkan bahwa setiap butir pertanyaan memiliki hubungan yang cukup kuat dengan skor total dan mampu mengukur variabel yang sama, yaitu tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram. Dengan demikian, dapat disimpulkan bahwa seluruh item kuesioner (P1–P10) valid dan layak digunakan dalam analisis penelitian lebih lanjut.
 ### Uji Reliabilitas
