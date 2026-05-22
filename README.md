@@ -6,6 +6,28 @@ Perguruan tinggi merupakan lembaga pendidikan yang memiliki peran penting dalam 
 Tujuan penelitian ini yaitu untuk mengetahui tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram.
 ## Metode Penelitian
 Penelitian ini menggunakan pendekatan kuantitatif dengan jenis penelitian deskriptif untuk menggambarkan kondisi sebenarnya mengenai tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram. Metode yang digunakan adalah metode survei melalui penyebaran kuesioner kepada responden. Populasi dalam penelitian ini adalah seluruh mahasiswa Statistika yang berjumlah 154 orang, dengan jumlah sampel sebanyak 35 responden. Teknik pengambilan sampel yang digunakan adalah non-probability sampling dengan metode convenience sampling, yaitu pengambilan sampel berdasarkan kemudahan peneliti dalam memperoleh responden yang sesuai dengan tujuan penelitian. Data yang digunakan merupakan data primer yang diperoleh langsung dari hasil pengisian kuesioner oleh responden. Instrumen penelitian terdiri atas 10 item pernyataan, yaitu P1 sampai P10, yang diukur menggunakan skala Likert 1 sampai 5, mulai dari sangat tidak setuju hingga sangat setuju. Pengolahan dan analisis data dilakukan menggunakan software R. Analisis data diawali dengan uji validitas menggunakan korelasi item-total untuk mengetahui kelayakan item pernyataan, serta uji reliabilitas menggunakan metode Cronbach Alpha untuk mengukur tingkat konsistensi instrumen penelitian. Instrumen dinyatakan valid apabila nilai korelasi lebih besar dari r tabel dan dinyatakan reliabel apabila nilai Cronbach Alpha lebih besar dari 0,70.
+## Dataset Penelitian 
+#### Tabel Skala Pengukuran 
+| Skor | Keterangan |
+|---|---|
+| 1 | Sangat Tidak Setuju |
+| 2 | Tidak Setuju |
+| 3 | Netral |
+| 4 | Setuju |
+| 5 | Sangat Setuju |
+#### Variabel Penelitian
+| No | Pernyataan |
+|---|---|
+| 1 | Ruang kelas mendukung kenyamanan proses belajar |
+| 2 | Kebersihan lingkungan universitas terjaga dengan baik |
+| 3 | Fasilitas toilet di lingkungan universitas dalam kondisi bersih dan layak |
+| 4 | Ketersediaan jaringan internet/WiFi di lingkungan universitas mendukung kegiatan akademik mahasiswa dengan lancar |
+| 5 | Fasilitas perpustakaan di universitas mampu memenuhi kebutuhan belajar mahasiswa |
+| 6 | Area parkir di lingkungan universitas cukup memadai bagi mahasiswa |
+| 7 | Sarana dan prasarana universitas mendukung kegiatan perkuliahan |
+| 8 | Saya merasa puas terhadap sarana dan prasarana yang telah disediakan |
+| 9 | Sarana dan prasarana di universitas membantu kegiatan belajar saya |
+| 10 | Secara keseluruhan sarana dan prasarana di universitas telah memenuhi kebutuhan mahasiswa |
 ## Tahapan Analisis Data
 ### 1. Analisis Slovin (Pengambilan Sampel)
 Analisis ini bertujuan untuk menentukan jumlah sampel penelitian yang akan digunakan berdasarkan rumus Slovin, sehingga sampel yang diambil dapat mewakili populasi secara proporsional dengan tingkat kesalahan (error) yang telah ditentukan. Dalam penelitian ini, rumus Slovin digunakan untuk menghitung jumlah responden dari total populasi 154 mahasiswa dengan tingkat kesalahan 15%, sehingga diperoleh ukuran sampel yang dianggap cukup representatif untuk menggambarkan tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram.
@@ -46,6 +68,21 @@ Uji reliabilitas dalam penelitian ini bertujuan untuk mengukur tingkat konsisten
 alpha(item)$total
 # Menampilkan hasil cronbach Alphanya saja
 alpha(item)$total$raw_alpha
+```
+### 5. Analisis Deskriptif
+Analisis deskriptif digunakan untuk mengetahui gambaran umum responden berdasarkan jenis kelamin serta untuk mendeskripsikan jawaban responden terhadap setiap indikator kuesioner (P1–P10). Selain itu, analisis ini juga membantu dalam melihat kecenderungan tingkat kepuasan responden terhadap sarana dan prasarana yang diteliti.
+```r
+# Analisis Deskriptif Per Item
+item <- data[, c("P1","P2","P3","P4","P5",
+                 "P6","P7","P8","P9","P10")]
+
+deskriptif <- data.frame(
+  Mean = sapply(item, mean, na.rm = TRUE),
+  SD   = sapply(item, sd, na.rm = TRUE),
+  Min  = sapply(item, min, na.rm = TRUE),
+  Max  = sapply(item, max, na.rm = TRUE)
+)
+deskriptif
 ```
 ## Hasil dan Pembahasan
 ### Analisis Slovin
@@ -99,7 +136,6 @@ Uji reliabilitas bertujuan untuk mengukur sejauh mana instrumen kuesioner yang d
 | sd         | 0.4786536  |
 | median_r   | 0.3659243  |
 
----
 #### Tabel Cronbach’s Alpha
 | Komponen         | Nilai    |
 |------------------|----------|
@@ -109,6 +145,66 @@ Uji reliabilitas bertujuan untuk mengukur sejauh mana instrumen kuesioner yang d
 ![image alt](https://raw.githubusercontent.com/cokordedewi02-star/Tugas-2-Nonprobability-survey/90033953eccec6c4941301e57f3d7c022b4f0240/OUTPUT%20UJI%20REBILITAS.png)
 
 Berdasarkan hasil uji reliabilitas menggunakan Cronbach’s Alpha, diperoleh nilai raw alpha sebesar 0,8528. Nilai ini menunjukkan bahwa instrumen kuesioner memiliki tingkat reliabilitas yang tinggi karena telah melebihi batas minimum yang umumnya digunakan yaitu 0,70. Hal ini berarti bahwa seluruh butir pertanyaan dalam kuesioner memiliki konsistensi internal yang baik dalam mengukur variabel yang sama, yaitu tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram. Dengan demikian, instrumen penelitian dapat dinyatakan reliabel dan layak digunakan untuk analisis lebih lanjut.
+### Analisis Deskriptif
+#### Distribusi Responden
+##### Tabel Hasil Analisis Statistik Deskriptif pada Variabel Kuesion
+| Item | Mean  | SD     | Min | Max |
+|------|-------|--------|-----|-----|
+| P1   | 3.571 | 0.739  | 2   | 5   |
+| P2   | 3.886 | 0.676  | 2   | 5   |
+| P3   | 3.286 | 0.926  | 1   | 5   |
+| P4   | 3.714 | 0.710  | 2   | 5   |
+| P5   | 3.943 | 0.684  | 3   | 5   |
+| P6   | 3.514 | 0.818  | 2   | 5   |
+| P7   | 3.771 | 0.598  | 3   | 5   |
+| P8   | 3.629 | 0.598  | 3   | 5   |
+| P9   | 3.886 | 0.718  | 3   | 5   |
+| P10  | 3.629 | 0.770  | 2   | 5   |
+
+Berdasarkan hasil analisis statistik deskriptif pada indikator P1 sampai P10, diperoleh nilai rata-rata (mean) jawaban responden berkisar antara 3,286 hingga 3,943. Secara umum, hasil tersebut menunjukkan bahwa responden cenderung memberikan penilaian yang cukup baik terhadap sarana dan prasarana di universitas. Nilai mean tertinggi terdapat pada indikator P5 yaitu “Fasilitas perpustakaan di universitas mampu memenuhi kebutuhan belajar mahasiswa” sebesar 3,943, yang menunjukkan bahwa fasilitas perpustakaan dinilai paling baik oleh responden. Sementara itu, nilai mean terendah terdapat pada indikator P3 yaitu “Fasilitas toilet di lingkungan universitas dalam kondisi bersih dan layak” sebesar 3,286, yang mengindikasikan bahwa kepuasan terhadap fasilitas toilet masih relatif lebih rendah dibandingkan indikator lainnya.Indikator lainnya seperti kenyamanan ruang kelas, kebersihan lingkungan, jaringan internet/WiFi, area parkir, serta dukungan sarana dan prasarana terhadap kegiatan belajar memperoleh nilai mean di atas 3,5 yang menunjukkan bahwa fasilitas tersebut dinilai cukup baik oleh responden. Selain itu, nilai standar deviasi (SD) pada seluruh indikator berada pada rentang 0,598 hingga 0,926, yang menunjukkan bahwa jawaban responden relatif homogen atau tidak terlalu beragam. Secara keseluruhan, hasil analisis deskriptif menunjukkan bahwa mahasiswa merasa cukup puas terhadap sarana dan prasarana yang tersedia di universitas.
+
+### Perbandingan Penelitian 32 Responden dan 35 Responden
+Perbandingan antara sampel sebanyak 32 responden dan 35 responden bertujuan untuk mengetahui pengaruh perbedaan tingkat kesalahan (margin of error) dalam penentuan ukuran sampel menggunakan rumus Slovin terhadap hasil penelitian. Selain itu, perbandingan ini dilakukan untuk melihat tingkat konsistensi dan representatif data dalam menggambarkan kepuasan mahasiswa terhadap sarana dan prasarana universitas. Dengan adanya perbandingan tersebut, dapat diketahui apakah penambahan jumlah sampel memberikan hasil analisis yang lebih stabil, akurat, dan lebih mendekati kondisi populasi sebenarnya.
+### Perbandingan Penentuan Sampel Menggunakan Rumus Slovin
+#### Tabel Perbandingan Slovin
+| Keterangan | Sampel 32 Responden | Sampel 35 Responden |
+|---|---|---|
+| Populasi (N) | 154 | 154 |
+| Jumlah Sampel (n) | 32 | 35 |
+| Tingkat Kesalahan (e) | 16% | 15% |
+| Karakteristik Sampel | Sampel lebih sedikit | Sampel lebih banyak |
+| Representatif Data | Cukup mewakili populasi | Lebih mewakili populasi |
+| Tingkat Ketelitian | Ketelitian lebih rendah | Ketelitian lebih tinggi |
+| Risiko Kesalahan Penelitian | Lebih besar | Lebih kecil |
+| Stabilitas Hasil Analisis | Cenderung kurang stabil | Cenderung lebih stabil |
+
+Berdasarkan hasil perhitungan menggunakan rumus Slovin dengan populasi sebanyak 154, diperoleh dua variasi ukuran sampel yaitu 32 responden (tingkat kesalahan sekitar 15,7%) dan 35 responden (tingkat kesalahan sekitar 15%). Perbedaan ini menunjukkan bahwa semakin kecil tingkat kesalahan yang digunakan, maka jumlah sampel yang diperlukan akan semakin besar. Pada sampel 32 responden tingkat kesalahan yang lebih besar menyebabkan data yang diperoleh masih cukup mewakili populasi, tetapi tingkat ketelitiannya lebih rendah sehingga hasil analisis berpotensi lebih bervariasi atau kurang stabil. Sementara itu, pada sampel 35 responden dengan tingkat kesalahan yang lebih kecil sehingga data menjadi lebih mewakili dan lebih mendekati kondisi populasi sebenarnya, sehingga hasil analisis cenderung lebih akurat dan stabil. Dengan demikian sampel 35 responden lebih baik digunakan karena memiliki tingkat kesalahan yang lebih kecil, sehingga menghasilkan data yang lebih akurat, lebih mewakili, dan lebih stabil dibandingkan sampel 32 responden.
+### Perbandingan Uji Validitas
+#### Tabel Perbandingan Hasil Uji Validitas 32 dan 35 Sampel
+| Item | r hitung 32 sampel   | r tabel 32   | r hitung 35 sampel   | r tabel (35) | Keputusan |
+|------|----------------------|--------------|----------------------|--------------|-----------|
+| P1   | 0.531                | 0.349        | 0.5273531            | 0.334        | Valid     |
+| P2   | 0.666                | 0.349        | 0.6753768            | 0.334        | Valid     |
+| P3   | 0.615                | 0.349        | 0.6219837            | 0.334        | Valid     |
+| P4   | 0.584                | 0.349        | 0.5563039            | 0.334        | Valid     |
+| P5   | 0.613                | 0.349        | 0.5992148            | 0.334        | Valid     |
+| P6   | 0.534                | 0.349        | 0.5040188            | 0.334        | Valid     |
+| P7   | 0.741                | 0.349        | 0.7356221            | 0.334        | Valid     |
+| P8   | 0.683                | 0.349        | 0.6960094            | 0.334        | Valid     |
+| P9   | 0.865                | 0.349        | 0.8581276            | 0.334        | Valid     |
+| P10  | 0.871                | 0.349        | 0.8757098            | 0.334        | Valid     |
+
+Berdasarkan hasil uji validitas pada 10 item pernyataan (P1–P10) dengan dua ukuran sampel, yaitu 32 responden dan 35 responden, diketahui bahwa seluruh nilai r hitung pada kedua sampel lebih besar daripada r tabel masing-masing, sehingga semua item dinyatakan valid. Pada sampel 32 responden dengan r tabel sebesar 0,349 seluruh item memiliki nilai korelasi yang memenuhi kriteria validitas, dengan rentang r hitung antara 0,531 hingga 0,871. Hal ini menunjukkan bahwa setiap butir pertanyaan mampu mengukur variabel penelitian dengan cukup baik. Sementara itu, pada sampel 35 responden dengan r tabel sebesar 0,334 seluruh item juga menunjukkan hasil yang sama, yaitu valid, dengan rentang r hitung antara 0,504 hingga 0,876. Penurunan nilai r tabel pada sampel 35 menunjukkan bahwa dengan sampel yang lebih besar, kriteria validitas menjadi lebih longgar, namun tetap menghasilkan kesimpulan yang konsisten. Secara keseluruhan, tidak terdapat perbedaan hasil keputusan antara kedua sampel. Semua item dinyatakan valid baik pada sampel 32 maupun 35 responden. Hal ini menunjukkan bahwa instrumen penelitian memiliki konsistensi yang baik dan tetap layak digunakan.
+### Perbandingan Uji Validitas
+#### Tabel Perbandingan Hasil Uji Validitas
+| Keterangan          | Sampel 32 | Sampel 35 |
+|---------------------|----------|----------|
+| Cronbach’s Alpha    | 0.857    | 0.8528136 |
+| Jumlah Item         | 10       | 10       |
+
+Berdasarkan hasil uji reliabilitas menggunakan Cronbach’s Alpha, diperoleh nilai sebesar 0,857 pada sampel 32 responden dan 0,8528136 pada sampel 35 responden dengan jumlah item yang sama yaitu 10 pernyataan. Kedua nilai tersebut menunjukkan bahwa instrumen penelitian memiliki tingkat reliabilitas yang tinggi karena berada di atas batas minimal 0,70, sehingga termasuk dalam kategori reliabel atau sangat baik. Perbedaan nilai Cronbach’s Alpha antara kedua sampel sangat kecil, sehingga dapat disimpulkan bahwa penambahan jumlah responden dari 32 menjadi 35 tidak memberikan perubahan yang signifikan terhadap tingkat konsistensi instrumen. Hal ini menunjukkan bahwa kuesioner yang digunakan sudah stabil dan konsisten dalam mengukur variabel penelitian, serta hasilnya tidak dipengaruhi secara berarti oleh perbedaan ukuran sampel. Dengan demikian, baik pada sampel 32 maupun 35 responden, instrumen penelitian tetap dinyatakan reliabel dan layak digunakan untuk analisis lebih lanjut.
 
 ## Kesimpulan
 Berdasarkan hasil penelitian mengenai Analisis Tingkat Kepuasan Mahasiswa terhadap Sarana dan Prasarana di Universitas Mataram menggunakan pendekatan Non-Probability Sampling, diperoleh jumlah sampel sebanyak 35 responden dari total populasi 154 mahasiswa dengan tingkat kesalahan 15% berdasarkan perhitungan rumus Slovin. Hal ini menunjukkan bahwa sampel yang digunakan telah cukup mewakili kondisi populasi secara keseluruhan. Hasil uji validitas menunjukkan bahwa seluruh item pertanyaan (P1–P10) memiliki nilai r hitung yang lebih besar dibandingkan r tabel dimana r tabel sebesar 0,334, sehingga semua pertanyaan kuesioner dinyatakan valid. Dengan demikia setiap item pertanyaan mampu mengukur variabel kepuasan mahasiswa terhadap sarana dan prasarana dengan tepat dan sesuai dengan konsep yang diteliti. Selanjutnya, hasil uji reliabilitas menggunakan Cronbach’s Alpha diperoleh nilai sebesar 0,8528 yang dimana lebih besar dari batas minimum 0,70. Hal ini menunjukkan bahwa instrumen kuesioner memiliki tingkat konsistensi internal yang tinggi, sehingga hasil pengukuran yang diperoleh dapat dipercaya dan stabil apabila digunakan kembali pada kondisi yang serupa. Dengan demikian, dapat disimpulkan bahwa seluruh instrumen penelitian telah memenuhi kriteria validitas dan reliabilitas, sehingga layak digunakan dalam analisis lebih lanjut. Hasil penelitian ini juga dapat menjadi dasar yang kuat untuk menggambarkan tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram serta dapat dijadikan bahan evaluasi bagi pihak universitas dalam meningkatkan kualitas fasilitas yang tersedia.
+
+## Link Kuisioner: https://docs.google.com/forms/d/e/1FAIpQLSewX3YAl2maqbVi1Gm-GwqzbE9whAZHFOfhtGfsAW4NuA3csQ/viewform?usp=sharing&ouid=107627070410850911444
