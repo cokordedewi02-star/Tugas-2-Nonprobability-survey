@@ -146,8 +146,7 @@ Uji reliabilitas bertujuan untuk mengukur sejauh mana instrumen kuesioner yang d
 
 Berdasarkan hasil uji reliabilitas menggunakan Cronbach’s Alpha, diperoleh nilai raw alpha sebesar 0,8528. Nilai ini menunjukkan bahwa instrumen kuesioner memiliki tingkat reliabilitas yang tinggi karena telah melebihi batas minimum yang umumnya digunakan yaitu 0,70. Hal ini berarti bahwa seluruh butir pertanyaan dalam kuesioner memiliki konsistensi internal yang baik dalam mengukur variabel yang sama, yaitu tingkat kepuasan mahasiswa terhadap sarana dan prasarana di Universitas Mataram. Dengan demikian, instrumen penelitian dapat dinyatakan reliabel dan layak digunakan untuk analisis lebih lanjut.
 ### Analisis Deskriptif
-#### Distribusi Responden
-##### Tabel Hasil Analisis Statistik Deskriptif pada Variabel Kuesion
+##### Tabel Hasil Analisis Statistik Deskriptif pada Variabel Kuesioner
 | Item | Mean  | SD     | Min | Max |
 |------|-------|--------|-----|-----|
 | P1   | 3.571 | 0.739  | 2   | 5   |
